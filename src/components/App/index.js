@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Map from "./components/map";
-import credentials from "./credentials";
+import Map from "../Map";
+import credentials from "../../credentials";
 
 const mapURL =
-  "https://maps.googleapis.com/maps/api/js?key=" + credentials.mapsKey;
+  "https://maps.googleapis.com/maps/api/js?key=" +
+  process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 class App extends Component {
   constructor() {
