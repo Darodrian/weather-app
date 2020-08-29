@@ -58,7 +58,6 @@
     "terser-webpack-plugin": "2.3.8",
     "ts-pnp": "1.1.6",
     "url-loader": "2.3.0",
-    "webpack": "4.42.0",
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
@@ -92,7 +91,9 @@
     "node-env-run": "^4.0.1",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
-    "pino-colada": "^2.1.0"
+    "pino-colada": "^2.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.12"
   },
   "jest": {
     "roots": [
