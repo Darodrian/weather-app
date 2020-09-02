@@ -1,0 +1,11 @@
+.Content {
+  display: flex;
+}
+
+.LeftContainer {
+  flex: 4;
+}
+
+.RightContainer {
+  flex: 1;
+}
