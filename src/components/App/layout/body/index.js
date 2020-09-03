@@ -9,14 +9,12 @@ const API_URL =
 export default class Body extends Component {
   render() {
     return (
-      <div>
-        <Map
-          googleMapURL={API_URL}
-          containerElement={<div style={{ height: "400px" }} />}
-          mapElement={<div style={{ height: "100%" }} />}
-          loadingElement={<p>Cargando...</p>}
-        />
-      </div>
+      <Map
+        googleMapURL={API_URL}
+        containerElement={<div style={{ height: "93.5vh" }} />}
+        mapElement={<div style={{ height: "100%" }} />}
+        loadingElement={<p>Loading...</p>}
+      />
     );
   }
 }
