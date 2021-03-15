@@ -4,7 +4,9 @@ import {
   withScriptjs,
   withGoogleMap,
   Marker,
+  InfoWindow
 } from "react-google-maps";
+import { formatRelative } from "date-fns";
 import mapStyle from "../../style/mapStyle";
 
 const Map = (props) => {
@@ -18,6 +20,7 @@ const Map = (props) => {
     zoomControl: true,
   };
   const [markers, setMarkers] = React.useState([]);
+  const [selected, setSelected] = React.useState(null);
   const onMapClick = React.useCallback((event) => {
     setMarkers((current) => [
       ...current,
@@ -46,8 +49,25 @@ const Map = (props) => {
         <Marker
           key={marker.time.toISOString()}
           position={{ lat: marker.lat, lng: marker.lng }}
+          onClick={() => {
+            setSelected(marker);
+          }}
         />
       ))}
+
+      {selected ? (
+      <InfoWindow 
+      position={{ lat: selected.lat, lng: selected.lng }}
+      onCloseClick={() => {
+        setSelected(null);
+      }}
+      >
+        <div>
+          <h2>Hola</h2>
+          <p>Marked {formatRelative(selected.time, new Date())}</p>
+        </div>
+      </InfoWindow>
+      ) : null}
     </GoogleMap>
   );
 };

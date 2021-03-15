@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Map from "../../../Map";
+import Search from "../../../Search";
 
 const API_URL =
   "https://maps.googleapis.com/maps/api/js?key=" +
@@ -9,12 +10,15 @@ const API_URL =
 export default class Body extends Component {
   render() {
     return (
-      <Map
-        googleMapURL={API_URL}
-        containerElement={<div style={{ height: "93.5vh" }} />}
-        mapElement={<div style={{ height: "100%" }} />}
-        loadingElement={<p>Loading...</p>}
-      />
+      <div>
+        <Search />
+        <Map
+          googleMapURL={API_URL}
+          containerElement={<div style={{ height: "100%" }} />}
+          mapElement={<div style={{ height: "100%" }} />}
+          loadingElement={<p>Loading...</p>}
+        />
+      </div>
     );
   }
 }
