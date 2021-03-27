@@ -6,11 +6,11 @@ import Body from "./body";
 export default class Layout extends Component {
   render() {
     return (
-      <div className="Content">
-        <div className="LeftContainer">
+      <div className="content">
+        <div className="leftContainer">
           <Body />
         </div>
-        <div className="RightContainer">
+        <div className="rightContainer">
           <Sidebar />
         </div>
       </div>
